@@ -52,15 +52,14 @@ body{
 
 nav{
     width: 100%;
-    height: 60px;
+    
     background-color: var(--dark-turquoize) !important;
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 20px;
     padding: 0 10px;
     box-sizing: border-box;
+}
+.navbar-collapse .navbar-nav{
+    background-color: var(--dark-turquoize)
 }
 .navbar-brand{
     color: white;
@@ -84,6 +83,7 @@ nav ul a {
     height: 100%;
     display: flex;
     align-items: center;
+    border: 3px solid transparent !important;
 }
 nav ul li{
     height: 90%;
@@ -91,8 +91,8 @@ nav ul li{
     align-items: center;
 }
 nav ul li:hover a{
-    border-top: 3px double white;
-    border-bottom: 3px double white;
+    border-top: 3px double white !important;
+    border-bottom: 3px double white !important;
     box-sizing: border-box;
     color: white;
 }
@@ -156,7 +156,7 @@ th:last-child{
 th:first-child{
     padding-left: 10px;
 }
-tbody tr td:not(:first-child){
+tbody tr td:not(:first-child), thead tr th:not(:first-child){
     text-align: center;
 }
 tbody tr:nth-of-type(2n) td{
